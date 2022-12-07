@@ -1,0 +1,217 @@
+body {
+  background-color: #fcf9f8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.cart {
+  position: absolute;
+  top: 100;
+  right: 40;
+  height: 40px;
+  width: 40px;
+}
+
+.cart .fullcount {
+  position: absolute;
+  bottom: -15;
+  left: -10;
+  font-size: 1.2rem;
+  color: white;
+  padding: 1px 6px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.cart img {
+  height: 40px;
+  width: 40px;
+}
+
+.cart:hover {
+  cursor: pointer;
+}
+
+.grid {
+  width: calc(100vw - 200px);
+  margin-top: 200px;
+  margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-row-gap: 10px;
+  column-gap: auto;
+}
+
+.grid .element {
+  height: 100%;
+  width: 250px;
+  background-color: white;
+  box-shadow: 0px 2px 14px 0px rgba(184, 184, 184, 0.75);
+  -webkit-box-shadow: 0px 2px 14px 0px rgba(184, 184, 184, 0.75);
+  -moz-box-shadow: 0px 2px 14px 0px rgba(184, 184, 184, 0.75);
+  position: relative;
+}
+
+.grid .element .image {
+  width: 250px;
+  height: 250px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+}
+
+.grid .element .image:hover img {
+  filter: blur(3px);
+  transition-duration: 0.25s;
+}
+
+.grid .element .image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.grid .element .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  height: 100px;
+}
+
+.grid .element .info .info-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.grid .element .info .info-price {
+  font-size: 1.1rem;
+  color: gray;
+  margin-top: 7px;
+}
+
+.grid .element .button {
+  display: none;
+  z-index: 999;
+  position: absolute;
+  top: 125;
+  left: 50;
+  transform: translate(-50%, -50%);
+  outline: none;
+  border: none;
+}
+
+.grid .element .button button {
+  outline: none;
+  border: none;
+  padding: 10px;
+  width: 150px;
+}
+
+.grid .element .button button:hover {
+  cursor: pointer;
+  background-color: rgb(192, 192, 192);
+}
+
+.grid .element .image:hover .button {
+  display: block;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.grid .element .info .count {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  padding: 5px;
+  background-color: red;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.blackbg {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 99999999999999999;
+  background-color: rgba(0, 0, 0, 0.836);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.blackbg .whitebg .over {
+  height: 440px;
+  width: 700px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+}
+
+.blackbg .whitebg {
+  height: 500px;
+  width: 700px;
+  background-color: white;
+  border-radius: 30px;
+  position: relative;
+}
+
+.blackbg .whitebg .close {
+  position: absolute;
+  top: 10;
+  right: 20;
+  user-select: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.blackbg .whitebg .close:hover {
+  cursor: pointer;
+}
+
+.blackbg .whitebg .over .elts {
+  min-height: 75px;
+  width: 650px;
+  list-style: none;
+  background-color: rgb(226, 226, 226);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.blackbg .whitebg .over .elts .elts_name {
+  width: 45%;
+}
+
+.blackbg .whitebg .over .elts .elts_price {
+  width: 20%;
+}
+
+.blackbg .whitebg .over .elts .elts_count {
+  width: 35%;
+}
+
+.blackbg .whitebg .over .elts .delete {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.blackbg .whitebg .over .elts .delete:hover {
+  cursor: pointer;
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+  }
+  100% {
+    -webkit-transform: translateY(-25px);
+    transform: translateY(-25px);
+  }
+}

@@ -1,0 +1,117 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>AJM-shopswift</title>
+
+    <link rel="stylesheet" type="text/css" href="navigation_bar.css" />
+
+    <style type="text/css">
+      body {
+        background-image: url("home page.png");
+        background-position: right;
+        background-repeat: no-repeat;
+        position: relative;
+        background-color: rgb(230, 230, 230);
+        background-size: 55%;
+        height: calc(100vh - 25px);
+      }
+    </style>
+
+    <style>
+      .button {
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        font-family: Times New Roman;
+        display: inline-block;
+        font-size: 18px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        margin-left: 4.5%;
+        bottom: 50px;
+        border-radius: 50px;
+        top: 350px;
+        position: relative;
+        background-color: black;
+      }
+
+      .button:hover {
+        background-color: #313131;
+      }
+    </style>
+  </head>
+
+  <body>
+    <button class="button">Order now</button>
+
+    <svg viewbox="0 0 100 20">
+      <defs>
+        <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="20%" stop-color="#000000" />
+          <stop offset="95%" stop-color="#000000" />
+        </linearGradient>
+        <pattern
+          id="wave"
+          x="0"
+          y="0"
+          width="150"
+          height="10"
+          patternUnits="userSpaceOnUse"
+        >
+          <path
+            id="wavePath"
+            d="M-40 9 Q-30 7 -20 9 T0 9 T20 9 T40 9 T60 9 T80 9 T100 9 T120 9 V20 H-40z"
+            mask="url(#mask)"
+            fill="url(#gradient)"
+          >
+            <animateTransform
+              attributeName="transform"
+              begin="0s"
+              dur="1.5s"
+              type="translate"
+              from="0,0"
+              to="40,0"
+              repeatCount="indefinite"
+            />
+          </path>
+        </pattern>
+      </defs>
+
+      <text
+        text-anchor="middle"
+        x="20"
+        y="19"
+        z="1"
+        font-size="5"
+        font-family="Times New Roman"
+        fill="url(#wave)"
+        fill-opacity="0.6"
+      >
+        AJM Shop Swift
+      </text>
+      <text
+        text-anchor="middle"
+        x="20"
+        y="19"
+        z="1"
+        font-size="5"
+        font-family="Times New Roman"
+        fill="url(#gradient)"
+        fill-opacity="0.6"
+      >
+        AJM Shop Swift
+      </text>
+    </svg>
+
+    <b>
+      <div class="navbar">
+        <a href="shop.html">Home</a>
+        <a href="Store.html">Store</a>
+        <a href="About-us.html">About us</a>
+        <a href="Contact-us.html">Contact us</a>
+        <a href="Sign-up.html">Sign up</a>
+      </div>
+    </b>
+  </body>
+</html>

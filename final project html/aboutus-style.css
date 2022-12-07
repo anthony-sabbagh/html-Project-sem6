@@ -1,0 +1,53 @@
+body {
+  background-image: linear-gradient(to right, #313138, #89898a);
+  overflow-x: hidden;
+  font-family: sans-serif;
+}
+
+.part {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(31, 31, 31);
+  display: flex;
+  overflow: hidden;
+}
+
+.part:first-child {
+  margin-top: 50px;
+}
+
+.part:nth-child(2) {
+  background-color: rgb(206, 206, 206);
+}
+
+.part:nth-child(2) .parag {
+  color: rgb(31, 31, 31);
+}
+
+.part .parag {
+  height: 100vh;
+  width: calc(100vw / 2);
+  color: rgb(206, 206, 206);
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.part .parag p {
+  width: 70%;
+  text-align: justify;
+}
+
+.part .image {
+  height: 100vh;
+  width: calc(100vw / 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.part .image img {
+  height: 500px;
+  width: 500px;
+}
